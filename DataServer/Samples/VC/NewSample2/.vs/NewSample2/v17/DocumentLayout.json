@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\DataServer\\Samples\\VC\\NewSample2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6E929A3-5F53-45E5-A5F3-1FE5C6C825AF}|NewSample2.vcxproj|C:\\dev\\DataServer\\Samples\\VC\\Samples\\Sample3\\Sample3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sample3.cpp",
+              "DocumentMoniker": "C:\\dev\\DataServer\\Samples\\VC\\Samples\\Sample3\\Sample3.cpp",
+              "RelativeDocumentMoniker": "..\\Samples\\Sample3\\Sample3.cpp",
+              "ToolTip": "C:\\dev\\DataServer\\Samples\\VC\\Samples\\Sample3\\Sample3.cpp",
+              "RelativeToolTip": "..\\Samples\\Sample3\\Sample3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-18T22:20:26.204Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

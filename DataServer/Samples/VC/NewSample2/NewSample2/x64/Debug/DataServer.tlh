@@ -1,0 +1,1200 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.44.35216.0 (def99581).
+//
+// C:\dev\DataServer\Samples\VC\NewSample2\NewSample2\x64\Debug\DataServer.tlh
+//
+// C++ source equivalent of type library C:\dev\DataServer\DataServer.dll
+// compiler-generated file - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace DataServerLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("0f22982f-f8b2-4605-8f6d-2922770b9087"))
+/* LIBID */ __DataServerLib;
+struct __declspec(uuid("b1bd286e-851c-49e5-a912-9fe8e8c0eafd"))
+/* dispinterface */ _IStatusEvents;
+struct /* coclass */ DaqControl;
+struct __declspec(uuid("c650609a-455e-4f3d-ab23-f3f15776dd08"))
+/* dual interface */ IDaqControl2;
+struct __declspec(uuid("cc437592-56e6-4f51-a7d2-740101187586"))
+/* dual interface */ IDaqControl;
+enum TriggerType_enum : int;
+enum RangeType_enum : int;
+struct __declspec(uuid("6fcef2e4-b530-48f0-bb39-18c7328fffbc"))
+/* dual interface */ IDaqAdvanced;
+enum ClockType_enum : int;
+enum LevelType_enum : int;
+enum EdgeType_enum : int;
+struct __declspec(uuid("75108ceb-ded6-4be4-9dae-bc9f321ea42e"))
+/* dual interface */ IDaqSyncExternal;
+struct __declspec(uuid("49513185-00bf-41ed-bb1c-0e466e32a6df"))
+/* dual interface */ IDaqError;
+struct /* coclass */ DataServer;
+struct __declspec(uuid("03b2a002-2749-41ae-bebd-e636908e922d"))
+/* dual interface */ IDataServer2;
+struct __declspec(uuid("6ec800bb-c07e-4a9e-bd1a-b9ccaff76122"))
+/* dual interface */ IDataServer;
+enum BoardType_enum : int;
+struct /* coclass */ DeviceCollection;
+struct __declspec(uuid("a62b64b0-fb06-4330-97ca-6c795b9f6b57"))
+/* dual interface */ IDeviceCollection;
+struct /* coclass */ KistlerPlate;
+struct __declspec(uuid("3b96ffc4-46eb-46c1-b020-6feecf099817"))
+/* dual interface */ IKistlerPlate;
+struct __declspec(uuid("79672375-07a1-4265-acb7-fcdf82d74fa9"))
+/* dual interface */ IPlate;
+struct __declspec(uuid("92cafa88-dec2-443e-a32f-faf4c2fba234"))
+/* dual interface */ IDevice;
+struct __declspec(uuid("f009b81c-3f2d-49bf-b72c-f79d5242a623"))
+/* dual interface */ IPlateControl;
+struct __declspec(uuid("3e0770f6-ea48-4be5-a543-8570bcdec9cf"))
+/* dual interface */ IOffsets;
+struct __declspec(uuid("5bc8944a-5a2e-42e1-a83f-2a8404c3f145"))
+/* dual interface */ IDeviceMetadata;
+struct /* coclass */ Auxiliary;
+struct __declspec(uuid("7ddd7bf1-6749-46bb-916c-884b6aeee3f3"))
+/* dual interface */ IAuxiliary;
+struct /* coclass */ StrainGagePlate;
+struct /* coclass */ VirtualPlate;
+typedef enum TriggerType_enum TriggerType;
+typedef enum RangeType_enum RangeType;
+typedef enum ClockType_enum ClockType;
+typedef enum LevelType_enum LevelType;
+typedef enum EdgeType_enum EdgeType;
+typedef enum BoardType_enum BoardType;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IStatusEvents, __uuidof(_IStatusEvents));
+_COM_SMARTPTR_TYPEDEF(IDaqControl, __uuidof(IDaqControl));
+_COM_SMARTPTR_TYPEDEF(IDaqControl2, __uuidof(IDaqControl2));
+_COM_SMARTPTR_TYPEDEF(IDaqAdvanced, __uuidof(IDaqAdvanced));
+_COM_SMARTPTR_TYPEDEF(IDaqSyncExternal, __uuidof(IDaqSyncExternal));
+_COM_SMARTPTR_TYPEDEF(IDaqError, __uuidof(IDaqError));
+_COM_SMARTPTR_TYPEDEF(IDataServer, __uuidof(IDataServer));
+_COM_SMARTPTR_TYPEDEF(IDataServer2, __uuidof(IDataServer2));
+_COM_SMARTPTR_TYPEDEF(IDeviceCollection, __uuidof(IDeviceCollection));
+_COM_SMARTPTR_TYPEDEF(IDevice, __uuidof(IDevice));
+_COM_SMARTPTR_TYPEDEF(IPlate, __uuidof(IPlate));
+_COM_SMARTPTR_TYPEDEF(IKistlerPlate, __uuidof(IKistlerPlate));
+_COM_SMARTPTR_TYPEDEF(IPlateControl, __uuidof(IPlateControl));
+_COM_SMARTPTR_TYPEDEF(IOffsets, __uuidof(IOffsets));
+_COM_SMARTPTR_TYPEDEF(IDeviceMetadata, __uuidof(IDeviceMetadata));
+_COM_SMARTPTR_TYPEDEF(IAuxiliary, __uuidof(IAuxiliary));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("b1bd286e-851c-49e5-a912-9fe8e8c0eafd"))
+_IStatusEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT DaqComplete ( );
+    HRESULT NewDataAvailable (
+        unsigned int last_scan );
+};
+
+struct __declspec(uuid("d50da930-fab0-4213-aa34-bea7b6be3e90"))
+DaqControl;
+    // [ default ] interface IDaqControl2
+    // interface IDaqAdvanced
+    // interface IDaqSyncExternal
+    // interface IDaqError
+    // [ default, source ] dispinterface _IStatusEvents
+
+enum TriggerType_enum : int
+{
+    trigImmediate = 0,
+    trigSoftware = 1,
+    trigHWDigitalRisingEdge = 2,
+    trigHWDigitalFallingEdge = 3,
+    trigAnalogRisingEdge = 4,
+    trigAnalogFallingEdge = 5,
+    trigAnalogAbove = 6,
+    trigAnalogBelow = 7,
+    trigSWDigitalRisingEdge = 8,
+    trigSWDigitalFallingEdge = 9,
+    trigSWDigitalHighLevel = 10,
+    trigSWDigitalLowLevel = 11,
+    trigHWDigital = 12
+};
+
+struct __declspec(uuid("cc437592-56e6-4f51-a7d2-740101187586"))
+IDaqControl : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLastAvailableScan))
+    int LastAvailableScan;
+    __declspec(property(get=GetSample))
+    float Sample[][];
+    __declspec(property(get=GetRunning))
+    VARIANT_BOOL Running;
+    __declspec(property(get=GetSampleCorrected))
+    float SampleCorrected[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT MeasureOn ( );
+    HRESULT MeasureOff ( );
+    HRESULT Start (
+        int rate_per_chan,
+        int samples_per_chan,
+        TriggerType trigger,
+        RangeType range );
+    HRESULT Stop ( );
+    int GetLastAvailableScan ( );
+    float GetSample (
+        int channel_nbr,
+        int scan_nbr );
+    VARIANT_BOOL GetRunning ( );
+    _variant_t GetDeviceCollection ( );
+    HRESULT trigger ( );
+    HRESULT ReadOffsets (
+        RangeType range );
+    HRESULT SaveBioWareFile (
+        _bstr_t str_filename );
+    float GetSampleCorrected (
+        int channel_nbr,
+        int scan_nbr );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_MeasureOn ( ) = 0;
+      virtual HRESULT __stdcall raw_MeasureOff ( ) = 0;
+      virtual HRESULT __stdcall raw_Start (
+        /*[in]*/ int rate_per_chan,
+        /*[in]*/ int samples_per_chan,
+        /*[in]*/ TriggerType trigger,
+        /*[in]*/ RangeType range ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall get_LastAvailableScan (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall get_Sample (
+        /*[in]*/ int channel_nbr,
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Running (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceCollection (
+        /*[out,retval]*/ VARIANT * retval ) = 0;
+      virtual HRESULT __stdcall raw_trigger ( ) = 0;
+      virtual HRESULT __stdcall raw_ReadOffsets (
+        /*[in]*/ RangeType range ) = 0;
+      virtual HRESULT __stdcall raw_SaveBioWareFile (
+        /*[in]*/ BSTR str_filename ) = 0;
+      virtual HRESULT __stdcall get_SampleCorrected (
+        /*[in]*/ int channel_nbr,
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+};
+
+struct __declspec(uuid("c650609a-455e-4f3d-ab23-f3f15776dd08"))
+IDaqControl2 : IDaqControl
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetPretriggerArmed))
+    VARIANT_BOOL PretriggerArmed;
+    __declspec(property(get=GetAnalogTriggerChannel,put=PutAnalogTriggerChannel))
+    int AnalogTriggerChannel;
+    __declspec(property(get=GetAnalogTriggerLevel,put=PutAnalogTriggerLevel))
+    float AnalogTriggerLevel;
+    __declspec(property(get=GetPostTriggerDelayTime_ms,put=PutPostTriggerDelayTime_ms))
+    int PostTriggerDelayTime_ms;
+    __declspec(property(get=GetOffsetsEnabled))
+    VARIANT_BOOL OffsetsEnabled;
+    __declspec(property(get=GetActualRate))
+    float ActualRate;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT StartPretriggered (
+        int rate_per_chan,
+        int samples_per_chan,
+        int pretrigger_per_chan,
+        TriggerType trigger,
+        RangeType range );
+    VARIANT_BOOL GetPretriggerArmed ( );
+    int GetAnalogTriggerChannel ( );
+    void PutAnalogTriggerChannel (
+        int pVal );
+    float GetAnalogTriggerLevel ( );
+    void PutAnalogTriggerLevel (
+        float pVal );
+    int GetPostTriggerDelayTime_ms ( );
+    void PutPostTriggerDelayTime_ms (
+        int pVal );
+    VARIANT_BOOL GetOffsetsEnabled ( );
+    HRESULT SavePartialBioWareFile (
+        _bstr_t str_filename,
+        int last_n_samples_per_chan );
+    SAFEARRAY * arrVoltage (
+        int channel_nbr,
+        int scan_start,
+        int scan_end );
+    float GetActualRate ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_StartPretriggered (
+        /*[in]*/ int rate_per_chan,
+        /*[in]*/ int samples_per_chan,
+        /*[in]*/ int pretrigger_per_chan,
+        /*[in]*/ TriggerType trigger,
+        /*[in]*/ RangeType range ) = 0;
+      virtual HRESULT __stdcall get_PretriggerArmed (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_AnalogTriggerChannel (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall put_AnalogTriggerChannel (
+        /*[in]*/ int pVal ) = 0;
+      virtual HRESULT __stdcall get_AnalogTriggerLevel (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_AnalogTriggerLevel (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_PostTriggerDelayTime_ms (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall put_PostTriggerDelayTime_ms (
+        /*[in]*/ int pVal ) = 0;
+      virtual HRESULT __stdcall get_OffsetsEnabled (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SavePartialBioWareFile (
+        /*[in]*/ BSTR str_filename,
+        /*[in]*/ int last_n_samples_per_chan ) = 0;
+      virtual HRESULT __stdcall raw_arrVoltage (
+        /*[in]*/ int channel_nbr,
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall get_ActualRate (
+        /*[out,retval]*/ float * ActualRate ) = 0;
+};
+
+enum RangeType_enum : int
+{
+    rngBIP10VOLTS = 1,
+    rngBIP5VOLTS = 0,
+    rngBIP2PT5VOLTS = 2,
+    rngBIP2VOLTS = 14,
+    rngBIP1PT25VOLTS = 3,
+    rngBIP1VOLTS = 4,
+    rngBIPPT5VOLTS = 6,
+    rngBIPPT2VOLTS = 13,
+    rngBIPPT1VOLTS = 7,
+    rngUNI10VOLTS = 100,
+    rngUNI5VOLTS = 101,
+    rngUNI2PT5VOLTS = 102,
+    rngUNI1PT25VOLTS = 104
+};
+
+enum ClockType_enum : int
+{
+    clkInternal = 0,
+    clkExternal = 1
+};
+
+enum LevelType_enum : int
+{
+    levelLow = 0,
+    levelHigh = 1
+};
+
+struct __declspec(uuid("6fcef2e4-b530-48f0-bb39-18c7328fffbc"))
+IDaqAdvanced : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetMCCParameters (
+        int buffer_length_ms,
+        int update_rate_ms );
+    HRESULT SetLocalParameters (
+        int process_buffer_sz );
+    HRESULT SetClockSource (
+        ClockType clock_source );
+    HRESULT SetSyncOutDivider (
+        int divider_value );
+    HRESULT SetTriggerOutPolarity (
+        LevelType level );
+    HRESULT SetSyncInPolarity (
+        EdgeType edge );
+    HRESULT SetSyncOutPolarity (
+        LevelType level );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetMCCParameters (
+        /*[in]*/ int buffer_length_ms,
+        /*[in]*/ int update_rate_ms ) = 0;
+      virtual HRESULT __stdcall raw_SetLocalParameters (
+        /*[in]*/ int process_buffer_sz ) = 0;
+      virtual HRESULT __stdcall raw_SetClockSource (
+        /*[in]*/ ClockType clock_source ) = 0;
+      virtual HRESULT __stdcall raw_SetSyncOutDivider (
+        /*[in]*/ int divider_value ) = 0;
+      virtual HRESULT __stdcall raw_SetTriggerOutPolarity (
+        /*[in]*/ LevelType level ) = 0;
+      virtual HRESULT __stdcall raw_SetSyncInPolarity (
+        /*[in]*/ EdgeType edge ) = 0;
+      virtual HRESULT __stdcall raw_SetSyncOutPolarity (
+        /*[in]*/ LevelType level ) = 0;
+};
+
+enum EdgeType_enum : int
+{
+    edgeFalling = 0,
+    edgeRising = 1
+};
+
+struct __declspec(uuid("75108ceb-ded6-4be4-9dae-bc9f321ea42e"))
+IDaqSyncExternal : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetExternalSyncRate,put=PutExternalSyncRate))
+    double ExternalSyncRate;
+    __declspec(property(get=GetExternalSyncEdge,put=PutExternalSyncEdge))
+    EdgeType ExternalSyncEdge;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetSyncDeviceAddress (
+        _bstr_t address,
+        int port );
+    void PutExternalSyncRate (
+        double pRate );
+    double GetExternalSyncRate ( );
+    HRESULT EnableExternalSync ( );
+    HRESULT DisableExternalSync ( );
+    void PutExternalSyncEdge (
+        EdgeType syncEdge );
+    EdgeType GetExternalSyncEdge ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetSyncDeviceAddress (
+        /*[in]*/ BSTR address,
+        /*[in]*/ int port ) = 0;
+      virtual HRESULT __stdcall put_ExternalSyncRate (
+        /*[in]*/ double pRate ) = 0;
+      virtual HRESULT __stdcall get_ExternalSyncRate (
+        /*[out,retval]*/ double * pRate ) = 0;
+      virtual HRESULT __stdcall raw_EnableExternalSync ( ) = 0;
+      virtual HRESULT __stdcall raw_DisableExternalSync ( ) = 0;
+      virtual HRESULT __stdcall put_ExternalSyncEdge (
+        /*[in]*/ EdgeType syncEdge ) = 0;
+      virtual HRESULT __stdcall get_ExternalSyncEdge (
+        /*[out,retval]*/ EdgeType * syncEdge ) = 0;
+};
+
+struct __declspec(uuid("49513185-00bf-41ed-bb1c-0e466e32a6df"))
+IDaqError : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetError))
+    int Error;
+    __declspec(property(get=GetMessage))
+    _bstr_t Message;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    int GetError ( );
+    _bstr_t GetMessage ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Error (
+        /*[out,retval]*/ int * error_no ) = 0;
+      virtual HRESULT __stdcall get_Message (
+        /*[out,retval]*/ BSTR * error_msg ) = 0;
+};
+
+struct __declspec(uuid("ccca2d2d-0daf-4c91-9f54-5044cf1ed72e"))
+DataServer;
+    // [ default ] interface IDataServer2
+
+struct __declspec(uuid("6ec800bb-c07e-4a9e-bd1a-b9ccaff76122"))
+IDataServer : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t CreateDaqObject (
+        _bstr_t config_filename,
+        BoardType board_type,
+        int board_nbr );
+    _variant_t CreateDaqObject2 (
+        _bstr_t config_filename,
+        BoardType board_type,
+        int board_nbr,
+        int max_filebuf_sz_mb );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_CreateDaqObject (
+        /*[in]*/ BSTR config_filename,
+        /*[in]*/ BoardType board_type,
+        /*[in]*/ int board_nbr,
+        /*[out,retval]*/ VARIANT * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateDaqObject2 (
+        /*[in]*/ BSTR config_filename,
+        /*[in]*/ BoardType board_type,
+        /*[in]*/ int board_nbr,
+        /*[in]*/ int max_filebuf_sz_mb,
+        /*[out,retval]*/ VARIANT * retval ) = 0;
+};
+
+struct __declspec(uuid("03b2a002-2749-41ae-bebd-e636908e922d"))
+IDataServer2 : IDataServer
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDataServerVersion))
+    _bstr_t DataServerVersion;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetDataServerVersion ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_DataServerVersion (
+        /*[out,retval]*/ BSTR * retval ) = 0;
+};
+
+enum BoardType_enum : int
+{
+    brdKistler5691A1 = 0,
+    brdKistler5695A1 = 1,
+    brdMCC1602_16 = 2,
+    brdKistlerEthernet = 3
+};
+
+struct __declspec(uuid("6d15b758-83c1-4f57-be2b-2815f9717d6a"))
+DeviceCollection;
+    // [ default ] interface IDeviceCollection
+
+struct __declspec(uuid("a62b64b0-fb06-4330-97ca-6c795b9f6b57"))
+IDeviceCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    _variant_t Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    _variant_t GetItem (
+        long vIndex );
+    long GetCount ( );
+    _variant_t get_DeviceByName (
+        _bstr_t str_name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get__NewEnum (
+        /*[out,retval]*/ IUnknown * * ppUnk ) = 0;
+      virtual HRESULT __stdcall get_Item (
+        /*[in]*/ long vIndex,
+        /*[out,retval]*/ VARIANT * pvItem ) = 0;
+      virtual HRESULT __stdcall get_Count (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_get_DeviceByName (
+        /*[in]*/ BSTR str_name,
+        /*[out,retval]*/ VARIANT * pvItem ) = 0;
+};
+
+struct __declspec(uuid("3828b276-1431-4849-b5c8-d5f9e621dea4"))
+KistlerPlate;
+    // [ default ] interface IKistlerPlate
+    // interface IPlateControl
+    // interface IOffsets
+    // interface IDeviceMetadata
+
+struct __declspec(uuid("92cafa88-dec2-443e-a32f-faf4c2fba234"))
+IDevice : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetVoltage))
+    float Voltage[][];
+    __declspec(property(get=GetTime))
+    float Time[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t get_Handle ( );
+    float GetVoltage (
+        int channel,
+        int scan_nbr );
+    float GetTime (
+        int rate,
+        int scan_nbr );
+    SAFEARRAY * arrVoltage (
+        int channel,
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrTime (
+        int rate,
+        int scan_start,
+        int scan_end );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_get_Handle (
+        /*[out,retval]*/ VARIANT * pvVal ) = 0;
+      virtual HRESULT __stdcall get_Voltage (
+        /*[in]*/ int channel,
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Time (
+        /*[in]*/ int rate,
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall raw_arrVoltage (
+        /*[in]*/ int channel,
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrTime (
+        /*[in]*/ int rate,
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+};
+
+struct __declspec(uuid("79672375-07a1-4265-acb7-fcdf82d74fa9"))
+IPlate : IDevice
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFx))
+    float Fx[];
+    __declspec(property(get=GetFy))
+    float Fy[];
+    __declspec(property(get=GetFz))
+    float Fz[];
+    __declspec(property(get=GetMx))
+    float Mx[];
+    __declspec(property(get=GetMy))
+    float My[];
+    __declspec(property(get=GetMz))
+    float Mz[];
+    __declspec(property(get=GetTz))
+    float Tz[];
+    __declspec(property(get=GetAx))
+    float Ax[];
+    __declspec(property(get=GetAy))
+    float Ay[];
+    __declspec(property(get=GetFt))
+    float Ft[];
+    __declspec(property(get=GetCOFx))
+    float COFx[];
+    __declspec(property(get=GetCOFy))
+    float COFy[];
+    __declspec(property(get=GetCOFxy))
+    float COFxy[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    float GetFx (
+        int scan_nbr );
+    float GetFy (
+        int scan_nbr );
+    float GetFz (
+        int scan_nbr );
+    float GetMx (
+        int scan_nbr );
+    float GetMy (
+        int scan_nbr );
+    float GetMz (
+        int scan_nbr );
+    float GetTz (
+        int scan_nbr );
+    float GetAx (
+        int scan_nbr );
+    float GetAy (
+        int scan_nbr );
+    float GetFt (
+        int scan_nbr );
+    float GetCOFx (
+        int scan_nbr );
+    float GetCOFy (
+        int scan_nbr );
+    float GetCOFxy (
+        int scan_nbr );
+    SAFEARRAY * arrFx (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFy (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFz (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrMx (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrMy (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrMz (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrTz (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrAx (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrAy (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFt (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrCOFx (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrCOFy (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrCOFxy (
+        int scan_start,
+        int scan_end );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Fx (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fy (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fz (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Mx (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_My (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Mz (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Tz (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Ax (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Ay (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Ft (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_COFx (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_COFy (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_COFxy (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall raw_arrFx (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFy (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFz (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrMx (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrMy (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrMz (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrTz (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrAx (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrAy (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFt (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrCOFx (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrCOFy (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrCOFxy (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+};
+
+struct __declspec(uuid("3b96ffc4-46eb-46c1-b020-6feecf099817"))
+IKistlerPlate : IPlate
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetFx12))
+    float Fx12[];
+    __declspec(property(get=GetFx34))
+    float Fx34[];
+    __declspec(property(get=GetFy14))
+    float Fy14[];
+    __declspec(property(get=GetFy23))
+    float Fy23[];
+    __declspec(property(get=GetFz1))
+    float Fz1[];
+    __declspec(property(get=GetFz2))
+    float Fz2[];
+    __declspec(property(get=GetFz3))
+    float Fz3[];
+    __declspec(property(get=GetFz4))
+    float Fz4[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    float GetFx12 (
+        int scan_nbr );
+    float GetFx34 (
+        int scan_nbr );
+    float GetFy14 (
+        int scan_nbr );
+    float GetFy23 (
+        int scan_nbr );
+    float GetFz1 (
+        int scan_nbr );
+    float GetFz2 (
+        int scan_nbr );
+    float GetFz3 (
+        int scan_nbr );
+    float GetFz4 (
+        int scan_nbr );
+    SAFEARRAY * arrFx12 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFx34 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFy14 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFy23 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFz1 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFz2 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFz3 (
+        int scan_start,
+        int scan_end );
+    SAFEARRAY * arrFz4 (
+        int scan_start,
+        int scan_end );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Fx12 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fx34 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fy14 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fy23 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fz1 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fz2 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fz3 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Fz4 (
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall raw_arrFx12 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFx34 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFy14 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFy23 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFz1 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFz2 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFz3 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+      virtual HRESULT __stdcall raw_arrFz4 (
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+};
+
+struct __declspec(uuid("f009b81c-3f2d-49bf-b72c-f79d5242a623"))
+IPlateControl : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT set_Digital (
+        VARIANT_BOOL measure_on );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_set_Digital (
+        /*[in]*/ VARIANT_BOOL measure_on ) = 0;
+};
+
+struct __declspec(uuid("3e0770f6-ea48-4be5-a543-8570bcdec9cf"))
+IOffsets : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetOffset,put=PutOffset))
+    float Offset[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL get_AutoOffsets ( );
+    HRESULT reset_Offsets ( );
+    float GetOffset (
+        int channel );
+    void PutOffset (
+        int channel,
+        float pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_get_AutoOffsets (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_reset_Offsets ( ) = 0;
+      virtual HRESULT __stdcall get_Offset (
+        /*[in]*/ int channel,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_Offset (
+        /*[in]*/ int channel,
+        /*[in]*/ float pVal ) = 0;
+};
+
+struct __declspec(uuid("5bc8944a-5a2e-42e1-a83f-2a8404c3f145"))
+IDeviceMetadata : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetSerialNumber))
+    _bstr_t SerialNumber;
+    __declspec(property(get=GetManufacturer))
+    _bstr_t Manufacturer;
+    __declspec(property(get=GetModel))
+    _bstr_t Model;
+    __declspec(property(get=GetStartChannel))
+    int StartChannel;
+    __declspec(property(get=GetNumberOfChannels))
+    int NumberOfChannels;
+    __declspec(property(get=GetWidth_mm))
+    float Width_mm;
+    __declspec(property(get=GetLength_mm))
+    float Length_mm;
+    __declspec(property(get=GetdX_mm))
+    float dX_mm;
+    __declspec(property(get=GetdY_mm))
+    float dY_mm;
+    __declspec(property(get=GetAlpha_degrees))
+    float Alpha_degrees;
+    __declspec(property(get=GetDataServerVersion))
+    _bstr_t DataServerVersion;
+    __declspec(property(get=GetMoCapDataExists))
+    VARIANT_BOOL MoCapDataExists;
+    __declspec(property(get=GetLocation_dx_mm))
+    float Location_dx_mm;
+    __declspec(property(get=GetLocation_dy_mm))
+    float Location_dy_mm;
+    __declspec(property(get=GetLocation_dz_mm))
+    float Location_dz_mm;
+    __declspec(property(get=GetOrientation_rx_deg))
+    float Orientation_rx_deg;
+    __declspec(property(get=GetOrientation_ry_deg))
+    float Orientation_ry_deg;
+    __declspec(property(get=GetOrientation_rz_deg))
+    float Orientation_rz_deg;
+    __declspec(property(get=GetNetworkAddress))
+    _bstr_t NetworkAddress;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    _bstr_t GetSerialNumber ( );
+    _bstr_t GetManufacturer ( );
+    _bstr_t GetModel ( );
+    int GetStartChannel ( );
+    int GetNumberOfChannels ( );
+    float GetWidth_mm ( );
+    float GetLength_mm ( );
+    float GetdX_mm ( );
+    float GetdY_mm ( );
+    float GetAlpha_degrees ( );
+    _bstr_t GetDataServerVersion ( );
+    VARIANT_BOOL GetMoCapDataExists ( );
+    float GetLocation_dx_mm ( );
+    float GetLocation_dy_mm ( );
+    float GetLocation_dz_mm ( );
+    float GetOrientation_rx_deg ( );
+    float GetOrientation_ry_deg ( );
+    float GetOrientation_rz_deg ( );
+    _bstr_t GetNetworkAddress ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_SerialNumber (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Manufacturer (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_Model (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_StartChannel (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumberOfChannels (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall get_Width_mm (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Length_mm (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_dX_mm (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_dY_mm (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_Alpha_degrees (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall get_DataServerVersion (
+        /*[out,retval]*/ BSTR * retval ) = 0;
+      virtual HRESULT __stdcall get_MoCapDataExists (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Location_dx_mm (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_Location_dy_mm (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_Location_dz_mm (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_Orientation_rx_deg (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_Orientation_ry_deg (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_Orientation_rz_deg (
+        /*[out,retval]*/ float * retval ) = 0;
+      virtual HRESULT __stdcall get_NetworkAddress (
+        /*[out,retval]*/ BSTR * retval ) = 0;
+};
+
+struct __declspec(uuid("957a32f9-8e5e-41af-b011-5e0be8a00052"))
+Auxiliary;
+    // [ default ] interface IAuxiliary
+    // interface IOffsets
+
+struct __declspec(uuid("7ddd7bf1-6749-46bb-916c-884b6aeee3f3"))
+IAuxiliary : IDevice
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAux))
+    float Aux[][];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    float GetAux (
+        int channel,
+        int scan_nbr );
+    SAFEARRAY * arrAux (
+        int channel,
+        int scan_start,
+        int scan_end );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Aux (
+        /*[in]*/ int channel,
+        /*[in]*/ int scan_nbr,
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall raw_arrAux (
+        /*[in]*/ int channel,
+        /*[in]*/ int scan_start,
+        /*[in]*/ int scan_end,
+        /*[out,retval]*/ SAFEARRAY * * saResults ) = 0;
+};
+
+struct __declspec(uuid("e5945409-3fd8-48a1-b20b-ca60206856f3"))
+StrainGagePlate;
+    // [ default ] interface IPlate
+    // interface IOffsets
+
+struct __declspec(uuid("e767411c-a04c-4bbe-a4d9-370b60f97ac5"))
+VirtualPlate;
+    // [ default ] interface IPlate
+
+//
+// Wrapper method implementations
+//
+
+#include "C:\dev\DataServer\Samples\VC\NewSample2\NewSample2\x64\Debug\DataServer.tli"
+
+} // namespace DataServerLib
+
+#pragma pack(pop)
