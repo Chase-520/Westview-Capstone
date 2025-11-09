@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5DDB9275-3F2F-4A5F-8A48-408E4BC67F76}|NewSamples.vcxproj|C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\Sample1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5DDB9275-3F2F-4A5F-8A48-408E4BC67F76}|NewSamples.vcxproj|solutionrelative:Sample1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\NewSamples\\x64\\Debug\\DataServer.tlh||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NewSamples\\x64\\Debug\\DataServer.tlh||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataServer.tlh",
+              "DocumentMoniker": "C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\NewSamples\\x64\\Debug\\DataServer.tlh",
+              "RelativeDocumentMoniker": "NewSamples\\x64\\Debug\\DataServer.tlh",
+              "ToolTip": "C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\NewSamples\\x64\\Debug\\DataServer.tlh",
+              "RelativeToolTip": "NewSamples\\x64\\Debug\\DataServer.tlh",
+              "ViewState": "AgIAAJkEAAAAAAAAAAAUwK4EAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-15T21:36:48.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sample1.cpp",
+              "DocumentMoniker": "C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\Sample1.cpp",
+              "RelativeDocumentMoniker": "Sample1.cpp",
+              "ToolTip": "C:\\dev\\DataServer\\Samples\\VC\\NewSamples\\Sample1.cpp",
+              "RelativeToolTip": "Sample1.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-12T22:48:57.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
