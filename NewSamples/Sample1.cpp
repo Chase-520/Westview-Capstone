@@ -4,11 +4,32 @@
 
 #include "stdafx.h"
 #include <objbase.h>
+#include <atlsafe.h> // include for CComSafeArray
 
 // import data server 
 // TODO: change path to DataServer.dll
 #import "C:\dev\DataServer\DataServer.dll"
+void ProcessData(DataServerLib::IPlatePtr plate, int start_scan, int end_scan)
+{
+	CComSafeArray<float> fx;
+	fx.Attach(plate->arrFx(start_scan, end_scan));
 
+	CComSafeArray<float> fy;
+	fy.Attach(plate->arrFy(start_scan, end_scan));
+
+	CComSafeArray<float> fz;
+	fz.Attach(plate->arrFz(start_scan, end_scan));
+
+	CComSafeArray<float> ax;
+	ax.Attach(plate->arrAx(start_scan, end_scan));
+
+	CComSafeArray<float> ay;
+	ay.Attach(plate->arrAy(start_scan, end_scan));
+
+	for (int i = fx.GetLowerBound(); i <= fx.GetUpperBound(); i++) {
+		printf("[%d] %f, %f, %f, %f, %f\n", start_scan + i, fx[i], fy[i], fz[i], ax[i], ay[i]);
+	}
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
 	CoInitialize(NULL);
@@ -40,10 +61,38 @@ int _tmain(int argc, _TCHAR* argv[])
 			// read offets if enabled
 			daq->ReadOffsets(DataServerLib::rngBIP10VOLTS);
 
+
+			// Get the collection of devices
+			DataServerLib::IDeviceCollectionPtr dc = daq->GetDeviceCollection();
+			if (dc == NULL) {
+				printf("Device collection is NULL\n");
+				return -1;
+			}
+
+			// Look up device by name (from the XML file)
+			// The generic device interface provides Time, and Voltage Data.
+			// the device name is the user defined name in XML file. Ex: <Name>Plate 1</Name>
+			// TODO: Set device name to match a plate in the XML config file.
+			DataServerLib::IDevicePtr device = dc->get_DeviceByName(L"Plate 1");
+			if (device == NULL) {
+				printf("Device is NULL\n");
+				return -1;
+			}
+
+			// Get interface to plate
+			// The plate pointer servers Fx, Fy, Fz, Mx, My, Mz, Ax, Ay, Time, and Voltage Data.
+			// Or, use IKistlerPlatePtr to get raw force Fx12, Fx34, Fy14, Fy23, Fz1, Fz2, Fz3, Fz4 Data.
+			DataServerLib::IPlatePtr plate = device;
+			if (plate == NULL) {
+				printf("Plate is NULL\n");
+				return -1;
+			}
+
 			// prepare data acqusition, and wait for software trigger event
 			// Start (long rate_per_channel, long samples_per_channel, enum trigger_option, enum daq_range)
-			daq->Start(1000, 5000, DataServerLib::trigImmediate, DataServerLib::rngBIP10VOLTS);
+			daq->Start(1000, 10000, DataServerLib::trigImmediate, DataServerLib::rngBIP10VOLTS);
 
+			int counter = 0;
 			// loop while running
 			while (daq->Running) {
 				//wprintf(L"run status : %d...\n", daq->Running);
@@ -57,10 +106,13 @@ int _tmain(int argc, _TCHAR* argv[])
 
 				if (thisscan > prevscan) {
 					// call to process the data
-					// ProcessData (prevscan, thisscan);
+					ProcessData(plate, prevscan, thisscan);
 					prevscan = thisscan;
 					wprintf(L"processed %d...\n", thisscan);
 				}
+
+				counter++;
+		
 			}
 
 			// call stop (although, it should already be stopped)
