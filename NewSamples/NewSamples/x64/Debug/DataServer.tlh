@@ -1,6 +1,6 @@
-﻿// Created by Microsoft (R) C/C++ Compiler Version 14.44.35216.0 (32d1f0a3).
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.44.35216.0 (597df6da).
 //
-// C:\dev\DataServer\Samples\VC\NewSamples\NewSamples\x64\Debug\DataServer.tlh
+// C:\dev\Westview-Capstone\NewSamples\NewSamples\x64\Debug\DataServer.tlh
 //
 // C++ source equivalent of type library C:\dev\DataServer\DataServer.dll
 // compiler-generated file - DO NOT EDIT!
@@ -1193,7 +1193,7 @@ VirtualPlate;
 // Wrapper method implementations
 //
 
-#include "C:\dev\DataServer\Samples\VC\NewSamples\NewSamples\x64\Debug\DataServer.tli"
+#include "C:\dev\Westview-Capstone\NewSamples\NewSamples\x64\Debug\DataServer.tli"
 
 } // namespace DataServerLib
 

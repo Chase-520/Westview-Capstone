@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\dev\DataServer\Samples\VC\NewSamples\x64\Debug\NewSamples.exe</FullPath>
+      <FullPath>C:\dev\Westview-Capstone\NewSamples\x64\Debug\NewSamples.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
