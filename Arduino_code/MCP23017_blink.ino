@@ -30,7 +30,8 @@ void setup() {
 
   Serial.println("Looping...");
 
-  // mcp.digitalWrite(LED_PIN, HIGH);
+  mcp.pinMode(8, OUTPUT);
+  mcp.digitalWrite(8, HIGH);  // Write to B pins
 }
 
 void loop() {
