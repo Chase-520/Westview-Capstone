@@ -1,7 +1,14 @@
-# Westview-Capstone
-Westview Biomechanics capstone project, real-time force vector display
+# Westview-Capstone 2026
+Self balancing robot with two wheels
 
-# Prerequisites
-- Run Kistlersetup.exe
-- Install Instacal 6.7
-- Install Kistler Dataserver
+# Hardward
+- ESP32
+- Adafruit 9 axis imu
+- Adafruit GPIO extension board
+- Pololu dual motor driver * 2
+- N20 motor with encoder * 4
+- Rev 12v Battery
+- 2 axis joystick * 2
+
+# Software
+- 
