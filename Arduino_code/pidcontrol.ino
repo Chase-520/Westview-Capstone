@@ -1,8 +1,10 @@
 #include <Adafruit_BNO08x.h>
 
 // 电机控制引脚
-const int MOTOR_DIR = 13;  // AIN1 (Direction pin 1)
-const int MOTOR_PWM = 12;  // PWMA (Speed control)
+const int R_MOTOR_DIR = 4;  // AIN1 (Direction pin 1)
+const int R_MOTOR_PWM = 25;  // PWMA (Speed control)
+const int L_MOTOR_DIR = 2;  // AIN1 (Direction pin 1)
+const int L_MOTOR_PWM = 0;  // PWMA (Speed control)
 
 // BNO08x IMU引脚
 #define BNO08X_CS 10
@@ -14,7 +16,7 @@ float Kp = 5.0;   // 比例增益 - 调整这个值以获得响应
 float Ki = 0.05;  // 积分增益
 float Kd = 0.5;   // 微分增益
 
-float setpoint = 0.0;  // 目标pitch角度为0度
+float setpoint = -87.5;  // 目标pitch角度为0度
 float error = 0.0;
 float lastError = 0.0;
 float integral = 0.0;
@@ -37,8 +39,10 @@ long reportIntervalUs = 5000;  // 200Hz
 
 void setup() {
   // 设置电机引脚为输出
-  pinMode(MOTOR_DIR, OUTPUT);
-  pinMode(MOTOR_PWM, OUTPUT);
+  pinMode(L_MOTOR_DIR, OUTPUT);
+  pinMode(L_MOTOR_PWM, OUTPUT);
+  pinMode(R_MOTOR_DIR, OUTPUT);
+  pinMode(R_MOTOR_PWM, OUTPUT);
   
   Serial.begin(115200);
   while (!Serial) delay(10);  // 等待串口连接
@@ -78,10 +82,12 @@ void setMotor(int speed, bool forwardDirection) {
   if (speed < 0) speed = 0;
   
   // 设置方向
-  digitalWrite(MOTOR_DIR, forwardDirection ? HIGH : LOW);
+  digitalWrite(L_MOTOR_DIR, forwardDirection ? HIGH : LOW);
+  digitalWrite(R_MOTOR_DIR, forwardDirection ? LOW : HIGH);
   
   // 设置PWM速度
-  analogWrite(MOTOR_PWM, speed);
+  analogWrite(L_MOTOR_PWM, speed);
+  analogWrite(R_MOTOR_PWM, speed);
 }
 
 // 四元数转欧拉角函数
@@ -137,7 +143,7 @@ void loop() {
     // 只有在达到采样时间时才计算PID
     if (deltaTime >= sampleTime) {
       // PID计算
-      error = setpoint - ypr.pitch;
+      error = setpoint - ypr.roll;
       
       // 积分项（带抗饱和）
       integral += error * deltaTime;
