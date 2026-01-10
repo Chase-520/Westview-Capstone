@@ -12,4 +12,19 @@ Self balancing robot with two wheels
 - 2 axis joystick * 2
 
 # Software
-- 
+- Adafruit BN085 library
+
+
+# Time line
+
+
+# Electrical Schematics
+
+# Software Schematics
+
+# Summary
+
+# Future plan
+
+
+# Last updated
