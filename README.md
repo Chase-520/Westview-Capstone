@@ -1,7 +1,6 @@
 # Westview-Capstone 2026
 Self balancing robot with two wheels
-
-![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/prototype.png)
+![gif](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone_one.gif)
 # Hardward
 - ESP32
 - Adafruit 9 axis imu
@@ -10,18 +9,14 @@ Self balancing robot with two wheels
 - N20 motor with encoder * 4
 - Rev 12v Battery
 - 2 axis joystick * 2
-
+![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/prototype.png)
 # Software
 - Adafruit BN085 library
 
-
-# Time line
-
-
 # Electrical Schematics
-
+![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/Electrical_schematics.png)
 # Software Schematics
-
+![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/Software_schematics.png)
 # Summary
 
 # Future plan
