@@ -17,10 +17,10 @@ As a software orienated engineer, the biggest challeng on this challeng would be
 - N20 motor with encoder * 4
 - Rev 12v Battery
 - 2 axis joystick * 2
+![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/spurgearver.png)
 
 # Software
 - Adafruit BN085 library
-
 
 # First Prototype
 ![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/prototype.png)
