@@ -1,5 +1,5 @@
 # Westview-Capstone 2026
-Self balancing robot with two wheels
+**Self balancing robot**
 ![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone.gif)
 
 # Summary
@@ -31,7 +31,10 @@ As a software orienated engineer, the biggest challeng on this challeng would be
 ![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/Software_schematics.png)
 
 # Future plan
-As for now, the robot's mechanical design is the weakest portion, I'm planning to use spur gear to distribute the load from the motor shaft to the motor mount and the 3D printed box.
+- As for now, the robot's mechanical design is the weakest portion, I'm planning to use spur gear to distribute the load from the motor shaft to the motor mount and the 3D printed box.
+- Specifically for mechanical design, the robot doesn't have the freedom to dynamically align the contact point of the wheel to the center of mass, consider a different leg structure to give more freedom.
+- On software controll loop, controller is unit tested but not integrated, the control loop is simple but hard to tune. Consider using a cascade pid loop to have a more responsive control
+- Consider addng a feedforward control method (MPC, LQR) to optimize control response.
 
 # Last updated
 01/12/2026
