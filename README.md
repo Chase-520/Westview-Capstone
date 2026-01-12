@@ -9,7 +9,7 @@ As a software orienated engineer, the biggest challenge on this project would be
 - This capstone project is inspired by a robotics competition in China named RoboMaster. Robots in that competition are required to complete missions through remote control, and being able to jump give the robot significant advantage in the competitoin. My capstone project aims to build a robot that can balance itself with only two wheels and being able to avoid obstacles through jumping.
 - The sensor used in this project is an IMU (inertia measurement unit), which can give the estimated orientation of the robot in yaw, pitch, roll for Euler angles or in quaterions. The software load in the micro controller ESP32 used a simple PID (Proportion, Integration, Derivation) controll loop that constantly calculate the error between desire pitch angle of the robot and the actual pitch angle (0 degrees compares to -3 degrees).
 
-# Hardward
+# Hardware
 - ESP32
 - Adafruit 9 axis imu
 - Adafruit GPIO extension board
