@@ -3,7 +3,7 @@
 ![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone.gif)
 
 # Summary
-As a software orienated engineer, the biggest challeng on this challeng would be the mechanical design. In the past 6 weeks, I spent significant amount of my time learning OnShape and design the robot.Logistic, BOM (Bill of material) also taught me engineering beyond technical.
+As a software orienated engineer, the biggest challenge on this project would be the mechanical design. In the past 6 weeks, I spent significant amount of my time learning OnShape and design the robot.Logistic, BOM (Bill of material) also taught me engineering beyond technical.
 
 # Concept explained
 - This capstone project is inspired by a robotics competition in China named RoboMaster. Robots in that competition are required to complete missions through remote control, and being able to jump give the robot significant advantage in the competitoin. My capstone project aims to build a robot that can balance itself with only two wheels and being able to avoid obstacles through jumping.
