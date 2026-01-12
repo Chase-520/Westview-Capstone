@@ -27,6 +27,9 @@ As a software orienated engineer, the biggest challeng on this challeng would be
 
 # Electrical Schematics
 ![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/Electrical_schematics.png)
+
+**ESP32 pinout**
+![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/pinout.png)
 # Software Schematics
 ![image](https://github.com/Chase-520/Westview-Capstone/blob/main/images/Software_schematics.png)
 
