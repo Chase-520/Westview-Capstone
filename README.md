@@ -1,6 +1,6 @@
 # Westview-Capstone 2026
 Self balancing robot with two wheels
-![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone_one.gif)
+![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone.gif)
 # Hardward
 - ESP32
 - Adafruit 9 axis imu
