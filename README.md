@@ -3,11 +3,12 @@
 ![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone.gif)
 
 # Summary
-As a software orienated engineer, the biggest challenge on this project would be the mechanical design. In the past 6 weeks, I spent significant amount of my time learning OnShape and design the robot.Logistic, BOM (Bill of material) also taught me engineering beyond technical.
+As a software-oriented engineer, the biggest challenge in this project was the mechanical design. Over the past six weeks, I spent a significant amount of time learning OnShape and designing the robot. Logistics and the Bill of Materials (BOM) also taught me about engineering aspects beyond just technical skills.
 
 # Concept explained
-- This capstone project is inspired by a robotics competition in China named RoboMaster. Robots in that competition are required to complete missions through remote control, and being able to jump give the robot significant advantage in the competitoin. My capstone project aims to build a robot that can balance itself with only two wheels and being able to avoid obstacles through jumping.
-- The sensor used in this project is an IMU (inertia measurement unit), which can give the estimated orientation of the robot in yaw, pitch, roll for Euler angles or in quaterions. The software load in the micro controller ESP32 used a simple PID (Proportion, Integration, Derivation) controll loop that constantly calculate the error between desire pitch angle of the robot and the actual pitch angle (0 degrees compares to -3 degrees).
+This capstone project is inspired by the RoboMaster robotics competition in China. Robots in that competition are required to complete missions via remote control, and the ability to jump provides a significant competitive advantage. My capstone project aims to build a robot that can balance itself on only two wheels and avoid obstacles by jumping.
+
+The sensor used in this project is an IMU (Inertial Measurement Unit), which provides the estimated orientation of the robot in Euler angles (yaw, pitch, roll) or quaternions. The software running on the ESP32 microcontroller uses a simple PID (Proportional, Integral, Derivative) control loop that constantly calculates the error between the desired pitch angle of the robot and the actual pitch angle (0 degrees compared to -3 degrees).
 
 # Hardware
 - ESP32
