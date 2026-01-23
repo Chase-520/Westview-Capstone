@@ -1,6 +1,6 @@
 # Westview-Capstone 2026
 **Self balancing robot**
-![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/milestone.gif)
+![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/display.gif)
 
 # Summary
 As a software-oriented engineer, the biggest challenge in this project was the mechanical design. Over the past six weeks, I spent a significant amount of time learning OnShape and designing the robot. Logistics and the Bill of Materials (BOM) also taught me about engineering aspects beyond just technical skills.
