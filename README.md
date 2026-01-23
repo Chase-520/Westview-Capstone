@@ -1,5 +1,6 @@
 # Westview-Capstone 2026
 **Self balancing robot**
+
 ![Alt Text](https://github.com/Chase-520/Westview-Capstone/blob/main/images/display.gif)
 
 # Summary
